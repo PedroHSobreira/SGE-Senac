@@ -8,7 +8,7 @@ Durante o desenvolvimento foram aplicados conceitos de modelagem de banco de dad
 
 O projeto propõe substituir o sistema interno de gerenciamento escolar do Senac por uma solução digital estruturada, moderna e centralizada, promovendo maior eficiência com foco de automatizar processos facilitando todos os usuários promovendo transparência e melhor acompanhamento da jornada acadêmica.
 
-Funcionalidades
+Funcionalidades:
     Autenticação e Controle de Acesso
         - Login com três perfis distintos: Administrador, Docente e Aluno
         - Controle de permissões baseado em perfil
@@ -20,21 +20,21 @@ Funcionalidades
         - CRUD de cursos, turmas e Unidades Curriculares (UCs)
         - Gerenciamento de vínculos entre entidades
         - Organização da estrutura acadêmica
-    Docente
+    Docente:
     O Docente atua diretamente no processo pedagógico.
         - Realização de chamada (controle de presença)
         - Lançamento de avaliações parciais
         - Lançamento de avaliações finais
         - Registro de notas por Unidade Curricular
         - Acompanhamento acadêmico das turmas vinculadas
-    Aluno
+    Aluno:
     O Aluno possui acesso restrito às suas próprias informações acadêmicas.
         - Visualização de faltas e presenças
         - Consulta do total de aulas por Unidade Curricular
         - Acompanhamento de desempenho acadêmico por UC
         - O aluno pode selecionar a Unidade Curricular desejada para visualizar seu histórico de frequência e progresso.
 
-Sistema de Vínculos
+Sistema de Vínculos:
     - Relacionamento Aluno × Turma
     - Relacionamento UC × Curso
     - Relacionamento Docente × Curso
@@ -42,14 +42,14 @@ Sistema de Vínculos
     - Relacionamento Docente × Turma
     - Implementação de tabelas pivot utilizando Eloquent ORM para gerenciar relacionamentos muitos-para-muitos
     
-Regras de Negócio e Integridade
+Regras de Negócio e Integridade:
     - Validação automática de CPF
     - Geração automática de RA único
     - Validação de campos obrigatórios
     - Aplicação de regras de consistência no backend
     - Garantia de integridade referencial entre as entidades do sistema
     
-Tecnologias Utilizadas
+Tecnologias Utilizadas:
     - PHP 8.x
     - Laravel 10
     - Eloquent ORM
@@ -59,7 +59,7 @@ Tecnologias Utilizadas
     - JavaScript
     - Bootstrap 5
     
-Status do Projeto
+Status do Projeto:
 Este projeto foi desenvolvido como parte de um Projeto Integrador e encontra-se em fase de aprimoramento.
 
 Atualmente, algumas funcionalidades ainda não estão finalizadas:
