@@ -1,64 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+📚 Sistema de Gerenciamento Escolar com Laravel
+PHP Laravel HTML CSS JavaScript Bootstrap SQLite
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+📌 O Senac App é um Sistema de Gerenciamento Escolar (SGE) desenvolvido como parte do Projeto Integrador do curso Técnico em Informática no Senac São Bernardo do Campo.
 
-## About Laravel
+A aplicação foi construída utilizando Laravel com arquitetura MVC, com o objetivo de centralizar e automatizar processos acadêmicos como cadastro de alunos, docentes, cursos, turmas e avaliações.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O sistema implementa controle de autenticação para diferentes perfis (Administrador, Docente e Aluno), gerenciamento de vínculos entre entidades (aluno x turma, docente x curso), lançamento de avaliações parciais e organização das unidades curriculares.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Durante o desenvolvimento foram aplicados conceitos de modelagem de banco de dados, relacionamentos utilizando Eloquent ORM (hasMany, belongsTo, belongsToMany), migrations, validações e manipulação estruturada de dados, garantindo integridade e organização das informações.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+O projeto tem como foco substituir o sistema interno de gerenciamento escolar do Senac por uma solução digital estruturada, moderna e centralizada, promovendo maior eficiência com foco de automatizar processos facilitando todos os usuários promovendo transparência e melhor acompanhamento da jornada acadêmica.
 
-## Learning Laravel
+✨ Funcionalidades:
+🔐 Autenticação e Controle de Acesso
+O sistema possui autenticação com três perfis distintos: Administrador, Docente e Aluno.
+Cada usuário visualiza apenas as funcionalidades permitidas ao seu perfil, com redirecionamento dinâmico após o login e controle de permissões aplicado no backend.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+👨‍🎓 Gestão de Alunos
+Cadastro, edição e exclusão de alunos
+Validação automática de CPF no momento do cadastro
+Geração automática de RA (Registro Acadêmico) único
+Associação de alunos às turmas
+Visualização do próprio desempenho acadêmico
+O aluno pode acompanhar suas notas e evolução de forma organizada, com visualização por Unidade Curricular (UC), garantindo maior clareza sobre seu progresso ao longo do curso.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+👨‍🏫 Gestão de Docentes
+Cadastro e manutenção de docentes
+Vinculação de docentes a cursos e unidades curriculares
+Lançamento de avaliações parciais
+Realização de chamada (controle de presença dos alunos)
+Registro de informações pedagógicas
+O docente possui acesso às turmas vinculadas, podendo registrar presença e notas, contribuindo diretamente para o acompanhamento acadêmico dos alunos.
 
-## Laravel Sponsors
+📚 Gestão Acadêmica
+Cadastro de cursos e turmas
+Organização das Unidades Curriculares (UCs)
+Estruturação do ciclo acadêmico de forma centralizada
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+🔄 Sistema de Vínculos
+Relacionamento aluno × turma
+Relacionamento docente × curso
+Implementação de tabelas pivot utilizando Eloquent ORM para gerenciar relacionamentos muitos-para-muitos
 
-### Premium Partners
+📝 Avaliações Parciais
+Lançamento de notas pelos docentes
+Registro de indicadores de desempenho
+Armazenamento estruturado das avaliações no banco de dados
+Consulta das notas pelo aluno de acordo com cada Unidade Curricular
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+🛡️ Integridade e Validação de Dados
+Validação de campos obrigatórios
+Regras de consistência aplicadas no backend
+Utilização de relacionamentos estruturados com Eloquent ORM
+Garantia de integridade referencial entre as entidades do sistema
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+🛠 Tecnologias Utilizadas
+PHP 8.x
+Laravel 10
+Eloquent ORM
+SQLite (ambiente de desenvolvimento)
+HTML5
+CSS3
+JavaScript
+Bootstrap 5
